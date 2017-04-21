@@ -42,6 +42,9 @@ audio:not([controls]) {
 template {
   display: none;
 }
+{
+  text-indent:10px;
+}
 a {
   background: transparent;
 }
@@ -221,7 +224,7 @@ th {
   img {
     max-width: 100% !important;
   }
-  p,
+
   h2,
   h3 {
     orphans: 3;
@@ -467,6 +470,7 @@ h6,
 }
 p {
   margin: 0 0 10px;
+  text-indent: 30px;
 }
 .lead {
   margin-bottom: 20px;

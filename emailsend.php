@@ -4,16 +4,13 @@ ob_start();
 require 'phpmailer/PHPMailerAutoload.php';
 require 'DbMessage.php';
 
-
+$dbo = new DbOperation();
 
 $name = $_POST["name"];
 $lastname = $_POST["lastname"];
 $phone = $_POST["phone"];
 $email = $_POST["email"];
 $message = $_POST["message"];
-
-$dbo = new DbOperation();
-$dbo->insert($name, $lastname, $phone, $email, $message);
 
 $mail = new PHPMailer;
 //$mail->SMTPDebug = 3;                             	  // Enable verbose debug output
@@ -41,7 +38,7 @@ $mail->Body    = "Nowe zgłoszenie na kurs VCA<br>
 
 if($mail->send())
 {
-	
+	$dbo->insert($name, $lastname, $phone, $email, $message);
 	echo "<script>alert('Twoje zgłoszenie na szkolenie VCA zostało wysłane')</script>";
 }
 else

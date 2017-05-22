@@ -8,6 +8,18 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {outline: none !important;
 }
+.iconEfect
+{
+	
+	transition: all 0.2s ease-in-out;
+}
+
+.iconEfect:hover
+{
+	-webkit-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
+}
 html{
 	background:#fff;
 }
